@@ -48,11 +48,11 @@ export default function DashboardView() {
                     Please Top up the Account for 50$ For Activation.
                 </Typography>
             </Stack>
-            <Stack sx={{ paddingLeft: "20px", marginTop:"20px" }}>
-                <Typography component={"h6"} sx={{color:"#495057", fontSize:"16px", fontWeight:500}}>
+            <Stack sx={{ paddingLeft: "20px", marginTop: "20px" }}>
+                <Typography component={"h6"} sx={{ color: "#495057", fontSize: "16px", fontWeight: 500 }}>
                     Wallet replenishment
                 </Typography>
-                <Stack direction={"row"} sx={{marginTop:"20px"}} >
+                <Stack direction={"row"} sx={{ marginTop: "20px" }} >
                     <TextField
                         id="demo-helper-text-aligned"
                         label="Amount $"
@@ -84,10 +84,12 @@ export default function DashboardView() {
                 </Stack>
             </Stack>
             <Stack>
-                <Typography component={"h4"} sx={{ fontSize: "20px", textAlign:"center",color:"#495057" }}>
+                <Typography component={"h4"} sx={{ fontSize: "17px", textAlign: "center", color: "#495057" }}>
                     Level Info
                 </Typography>
-                <LevelTable />
+                <Stack padding={"16px 24px"}>
+                    <LevelTable />
+                </Stack>
             </Stack>
         </Stack>
 

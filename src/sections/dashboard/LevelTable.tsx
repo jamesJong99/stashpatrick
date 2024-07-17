@@ -35,7 +35,7 @@ const rows = [
 
 export default function LevelTable() {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -47,8 +47,9 @@ export default function LevelTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {rows.map((row, ind) => (
             <TableRow
+              className={(ind == 0?'select-row':'')}
               key={row.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >

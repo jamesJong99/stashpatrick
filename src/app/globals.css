@@ -194,3 +194,13 @@ input {
     border: 1px solid black;
     color: #8fbd56;
 }
+.MuiTableCell-root {
+    border: 1px solid #eaedf1;
+    font-weight: 500;
+}
+.select-row {
+    background-color: #d2ecb8;
+}
+.select-row:hover {
+    background-color: #c5e7a4;
+}
