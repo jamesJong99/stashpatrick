@@ -1,0 +1,203 @@
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    background-color: #f5f5ff;
+    font-size: 13.4px;
+}
+
+p, span{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 13.4px;
+}
+input {
+    color: "#000"
+}
+.MuiAppBar-root {
+    background-color: #018935 !important;
+}
+
+.active>a:after {
+    border-right-color: #2B7DBC;
+}
+
+.active>a:after {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    border: 8px solid transparent;
+    border-width: 14px 10px;
+}
+
+.nav-li::after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: -1px;
+    bottom: 0;
+    z-index: 1;
+    border: 2px solid #2B7DBC;
+    border-width: 0 2px 0 0;
+}
+
+.nav-item-select,
+.nav-item-select svg {
+    color: #2B7DBC;
+    background-color: #FFF;
+}
+
+.nav-item-select::after {
+    content: '';
+    border-right-color: #2B7DBC !important;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    border: 8px solid transparent;
+    border-width: 14px 10px;
+}
+
+.nav-item:hover {
+    background-color: #FFF;
+    color: #2B7DBC;
+}
+
+.nav-item:hover svg {
+    color: #2B7DBC;
+
+}
+
+.nav-item:hover::before {
+    /* display: none; */
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    z-index: 1;
+    height: 41px;
+    width: 3px;
+    max-width: 3px;
+    overflow: hidden;
+    background-color: #629CC9;
+}
+
+.item-title {
+    position: absolute;
+    right: -10px;
+}
+
+.btn-login {
+    box-sizing: none;
+    font-size: 14.3px;
+    font-weight: 400;
+    padding: 2px 16px;
+}
+
+.btn-login:hover {
+    box-shadow: none;
+}
+
+.btn-register {
+    font-size: 13.4px;
+    height: 40px;
+    /* border-radius: 0; */
+    box-shadow: none;
+    background-color: #8fbd56;
+    border: none;
+}
+
+.btn-register:hover {
+    background-color: #8fbd56e6;
+    /* border: 4px solid #87B87F; */
+    box-shadow: none;
+}
+.link {
+    text-decoration: none;
+}
+.link:hover p {
+    color: #343a40;
+}
+
+@keyframes login {
+    from {
+        transform: rotateY(150deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+.login-container {
+    display: none;
+}
+
+.login-container-active {
+    display: block;
+    animation-name: login;
+    animation-duration: 600ms;
+}
+
+@keyframes register {
+    from {
+        transform: rotateY(150deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+.register-container {
+    display: none;
+}
+
+.register-container-active {
+    display: block;
+    animation-name: register;
+    animation-duration: 600ms;
+
+}
+
+/* main */
+.shadow {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.auth-form {
+    border-radius: 5px;
+    background-color: #FFF;
+
+}
+.login1-form-title {
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-bottom: 30px;
+    color: #424344;
+}
+
+.MuiTextField-root {
+    height: 45px;
+}
+
+.btn-secret {
+    margin-top: 15px;
+    font-size: 13.4px;
+    height: 40px;
+    /* border-radius: 0; */
+    box-shadow: none;
+    background-color: #8fbd56;
+    border: none;
+}
+
+.btn-secret:hover {
+    background-color: #FFF;
+    color: #8fbd56;
+    /* border: 4px solid #87B87F; */
+    box-shadow: none;
+}
