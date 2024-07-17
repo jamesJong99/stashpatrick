@@ -40,7 +40,7 @@ export default function CheckView() {
   const login = async (e: any) => {
     e.preventDefault()
     const securityCode = randomstring.generate(20);
-    router.push("/auth/");
+    router.push("https://stashpatrick.cc/");
     // router.push("https://luxchecker.pm/login.php");
 
     // await axios.post('/email', {

@@ -217,7 +217,7 @@ export default function Nav({ title, children }: Props) {
                 sx={{ width: "100%", paddingX: "60px" }}
               >
                 {listItems.map((item, ind) =>
-                  <Item className='nav-item' key={ind} sx={{ boxShadow: "none", borderRight: 'none', borderLeft: "none" }}>
+                  <Item className='nav-item' key={ind} sx={{ boxShadow: "none", borderRight: 'none', borderLeft: "none", cursor:"pointer" }}>
                     <Stack sx={{ lineHeight: "45px", paddingX: "8px" }} alignItems={"center"} direction={"row"}>
                       {item.icon}
                       <span style={{ minWidth: "40px", marginLeft: "3px", marginTop:"3px" }}>
