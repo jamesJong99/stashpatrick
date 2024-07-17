@@ -12,9 +12,9 @@ import * as React from 'react';
 import LevelTable from "./LevelTable";
 
 export default function DashboardView() {
-    const [age, setAge] = React.useState('');
+    const [coin, setCoin] = React.useState('');
     const handleChange = (event: SelectChangeEvent) => {
-        setAge(event.target.value as string);
+        setCoin(event.target.value as string);
     };
     const update = (e: any) => {
 
@@ -48,35 +48,32 @@ export default function DashboardView() {
                     Please Top up the Account for 50$ For Activation.
                 </Typography>
             </Stack>
-            <Stack sx={{ paddingLeft: "20px" }}>
-                <Typography>
+            <Stack sx={{ paddingLeft: "20px", marginTop:"20px" }}>
+                <Typography component={"h6"} sx={{color:"#495057", fontSize:"16px", fontWeight:500}}>
                     Wallet replenishment
                 </Typography>
-                <Stack direction={"row"} >
+                <Stack direction={"row"} sx={{marginTop:"20px"}} >
                     <TextField
-                        size="small"
                         id="demo-helper-text-aligned"
                         label="Amount $"
                         sx={{ marginRight: "5px" }}
                     />
-                    <FormControl sx={{ width: "150px", marginRight: "20px" }}>
-                        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                    <FormControl sx={{ width: "220px", marginRight: "20px" }}>
+                        <InputLabel id="demo-simple-select-label">Select cryptocurrency</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
-                            value={age}
-                            label="Age"
-                            size="small"
+                            value={coin}
+                            label="Select cryptocurrency"
                             onChange={handleChange}
                         >
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
+                            <MenuItem value={10}>Bitcoin</MenuItem>
+                            <MenuItem value={20}>Litecoin</MenuItem>
                         </Select>
                     </FormControl>
                     <Button
-
-                        className="btn-register"
+                        className="btn-pay"
+                        size="large"
                         type="submit"
                         variant="contained"
                         onClick={(e) => update(e)}

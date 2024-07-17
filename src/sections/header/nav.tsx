@@ -168,35 +168,35 @@ export default function Nav({ title, children }: Props) {
         </Link>
         <Stack direction={"row"} justifyContent={"end"} sx={{ paddingTop: "5px" }}>
           <Box sx={{ paddingX: "12px" }}>
-            <Link href="#" style={{ textDecoration: "none" }}>
-              <ShoppingCartOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }} />
+            <Link href="#" style={{ textDecoration: "none" }} >
+              <ShoppingCartOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }} className='nav-item'/>
             </Link>
           </Box>
-          <Box sx={{ paddingX: "12px" }}>
+          <Box sx={{ paddingX: "12px" }} >
             <Link href="#" style={{ textDecoration: "none" }}>
-              <Typography sx={{ color: "#100f15" }}>
+              <Typography sx={{ color: "#100f15" }} className='nav-item'>
                 $ 0
               </Typography>
             </Link>
           </Box>
           <Box sx={{ paddingX: "12px" }}>
             <Link href="#" style={{ textDecoration: "none", display: "flex" }}>
-              <NorthOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }} />
-              <Typography sx={{ color: "#100f15" }}>
+              <NorthOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }}  />
+              <Typography sx={{ color: "#100f15" }} className='nav-item'>
                 0 LVL
               </Typography>
             </Link>
           </Box>
           <Box sx={{ paddingX: "15px" }}>
             <Link href="#" style={{ textDecoration: "none", display: "flex" }}>
-              <Typography sx={{ color: "#100f15" }}>
+              <Typography sx={{ color: "#100f15" }} className='nav-item'>
                 0 Points
               </Typography>
             </Link>
           </Box>
           <Box sx={{ paddingX: "15px" }}>
             <Link href="#" style={{ textDecoration: "none" }}>
-              <SupportOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }} />
+              <SupportOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }} className='nav-item' />
             </Link>
           </Box>
         </Stack>
@@ -217,10 +217,10 @@ export default function Nav({ title, children }: Props) {
                 sx={{ width: "100%", paddingX: "60px" }}
               >
                 {listItems.map((item, ind) =>
-                  <Item key={ind} sx={{ boxShadow: "none", borderRight: 'none', borderLeft: "none" }}>
+                  <Item className='nav-item' key={ind} sx={{ boxShadow: "none", borderRight: 'none', borderLeft: "none" }}>
                     <Stack sx={{ lineHeight: "45px", paddingX: "8px" }} alignItems={"center"} direction={"row"}>
                       {item.icon}
-                      <span style={{ minWidth: "40px", marginLeft: "5px" }}>
+                      <span style={{ minWidth: "40px", marginLeft: "3px", marginTop:"3px" }}>
                         {item.text}
                       </span>
                       {(item.childs ? <ChevronRightOutlinedIcon /> : <></>)}

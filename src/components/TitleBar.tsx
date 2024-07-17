@@ -9,8 +9,8 @@ interface props {
 }
 export const TitleBar = ({ title, child }: props) => {
     return (
-        <Stack direction={"row"} justifyContent={"space-between"} sx={{marginTop:"75px", paddingRight:"50px", background: "white"}}>
-            <Typography style={{ paddingBottom: "12px", fontFamily: "Open Sans", paddingLeft: "30px", paddingTop: "12px", fontSize: "24px", fontWeight: "400" }}>
+        <Stack direction={"row"} justifyContent={"space-between"} sx={{marginTop:"82px", paddingRight:"50px", background: "white"}}>
+            <Typography style={{ paddingBottom: "12px", paddingLeft: "30px", paddingTop: "12px", fontSize: "20px", fontWeight: "500", color: "#495057" }}>
                 {title} 
             </Typography>
             <Stack sx={{ color: "8089A0", fontSize: "16px", lineHeight:"60px" }} direction={"row"} fontSize={"16px"}>
