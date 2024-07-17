@@ -11,7 +11,7 @@ export const metadata = {
 export default function Page() {
     return <>
         <Nav title ="Dashboard" >
-            <TitleBar title="Dashboard" child="news" />
+            <TitleBar title="Wallet" child="news" />
             <Stack direction={"row"}>
                 <Box>
                 </Box>

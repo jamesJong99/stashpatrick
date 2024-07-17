@@ -17,21 +17,83 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { MonetizationOn, Settings, PowerSettingsNew, AvTimer, Margin } from '@mui/icons-material';
 import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import NorthOutlinedIcon from '@mui/icons-material/NorthOutlined';
+import SupportOutlinedIcon from '@mui/icons-material/SupportOutlined';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import CreditCardOutlinedIcon from '@mui/icons-material/CreditCardOutlined';
+import RocketLaunchOutlinedIcon from '@mui/icons-material/RocketLaunchOutlined';
+import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
+import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined';
+import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
+import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 
 const drawerWidth = 0;
 const listItems = [
   {
-    icon: "cn.png",
-    text: "中文"
+    icon: <HomeOutlinedIcon />,
+    text: "News",
+    childs: false
   },
   {
-    icon: "ru.png",
-    text: "русский"
+    icon: <CreditCardOutlinedIcon />,
+    text: "Cards",
+    childs: true,
   },
   {
-    icon: "us.png",
-    text: "English"
-  }
+    icon: <CreditCardOutlinedIcon />,
+    text: "Cards NoVBV",
+    childs: true,
+  },
+  {
+    icon: <RocketLaunchOutlinedIcon />,
+    text: "Socks",
+    childs: true,
+  },
+  {
+    icon: <StarBorderOutlinedIcon />,
+    text: "Sellers rating",
+    childs: false,
+  },
+  {
+    icon: <SendOutlinedIcon />,
+    text: "Chat",
+    childs: false,
+  },
+  {
+    icon: <SupportOutlinedIcon />,
+    text: "Tickets",
+    childs: false,
+  },
+  {
+    icon: <MonetizationOnOutlinedIcon />,
+    text: "Wallet",
+    childs: false,
+  },
+  {
+    icon: <Diversity3OutlinedIcon />,
+    text: "Partnership",
+    childs: false,
+  },
+  {
+    icon: <ThumbUpAltOutlinedIcon />,
+    text: "Services",
+    childs: false,
+  },
+  {
+    icon: <PermIdentityOutlinedIcon />,
+    text: "Profile",
+    childs: true,
+  },
+  {
+    icon: <LogoutOutlinedIcon />,
+    text: "Logout",
+    childs: false,
+  },
 ]
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -87,84 +149,86 @@ export default function Nav({ title, children }: Props) {
   };
 
   return (
-    <Box sx={{ padding: 0 }}>
+    <Box sx={{ padding: 0, backgroundColor:"white"}}>
       <CssBaseline />
-      <Stack>
-        <Link href="#">
-          <Typography>
+      <Stack
+        direction={"row"}
+        justifyContent={"space-between"}
+        sx={{
+          padding: "20px",
+        }}
+      >
+        <Link href="#" style={{ textDecoration: "none", paddingLeft: "14px" }}>
+          <Typography
+            component={"h4"}
+            sx={{ fontSize: "20px", color: "#8fbd56", }}
+          >
             PatrickStash
           </Typography>
         </Link>
+        <Stack direction={"row"} justifyContent={"end"} sx={{ paddingTop: "5px" }}>
+          <Box sx={{ paddingX: "12px" }}>
+            <Link href="#" style={{ textDecoration: "none" }}>
+              <ShoppingCartOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }} />
+            </Link>
+          </Box>
+          <Box sx={{ paddingX: "12px" }}>
+            <Link href="#" style={{ textDecoration: "none" }}>
+              <Typography sx={{ color: "#100f15" }}>
+                $ 0
+              </Typography>
+            </Link>
+          </Box>
+          <Box sx={{ paddingX: "12px" }}>
+            <Link href="#" style={{ textDecoration: "none", display: "flex" }}>
+              <NorthOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }} />
+              <Typography sx={{ color: "#100f15" }}>
+                0 LVL
+              </Typography>
+            </Link>
+          </Box>
+          <Box sx={{ paddingX: "15px" }}>
+            <Link href="#" style={{ textDecoration: "none", display: "flex" }}>
+              <Typography sx={{ color: "#100f15" }}>
+                0 Points
+              </Typography>
+            </Link>
+          </Box>
+          <Box sx={{ paddingX: "15px" }}>
+            <Link href="#" style={{ textDecoration: "none" }}>
+              <SupportOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }} />
+            </Link>
+          </Box>
+        </Stack>
       </Stack>
       <AppBar position="fixed" sx={{ boxShadow: "none" }} open={open}>
         <Toolbar sx={{ minHeight: "45px !important", paddingX: "10px !important" }}>
-
           <Stack
             direction="row"
             justifyContent={"space-between"}
             width={"100%"}
             alignItems={"center"}
           >
-            <Stack flexDirection={"row"} width={'100%'} justifyContent={'flex-start'}>
-              <Image
-                src={"/assets/images/Screenshot_31.png"}
-                alt=""
-                width={"32"}
-                height={"21"}
-                style={{ marginTop: "5px" }}
-              />
-              <Typography variant="h6" noWrap component="div" fontFamily={"Open Sans"} fontSize={"20px"} fontWeight={"400"}>
-
-                LuX Checker
-              </Typography>
-            </Stack>
-
-            <Stack direction={"row"}>
+            <Stack direction={"row"} width={"100%"}>
 
               <Stack
                 direction="row"
-                alignItems={"center"}
-                divider={<Divider orientation="vertical" flexItem />}
+                justifyContent="space-around"
+                sx={{ width: "100%", paddingX: "60px" }}
               >
                 {listItems.map((item, ind) =>
-                  <Item key={ind} sx={{ boxShadow: "none" }}>
+                  <Item key={ind} sx={{ boxShadow: "none", borderRight: 'none', borderLeft: "none" }}>
                     <Stack sx={{ lineHeight: "45px", paddingX: "8px" }} alignItems={"center"} direction={"row"}>
-                      <Image
-                        src={`/assets/images/${item.icon}`}
-                        alt=""
-                        width={"20"}
-                        height={"20"}
-                      />
-                      <span style={{ minWidth: "40px" }}>
+                      {item.icon}
+                      <span style={{ minWidth: "40px", marginLeft: "5px" }}>
                         {item.text}
                       </span>
+                      {(item.childs ? <ChevronRightOutlinedIcon /> : <></>)}
                     </Stack>
                   </Item>
                 )}
               </Stack>
-              <Item sx={{ boxShadow: "none", backgroundColor: "#2E8965" }}>
-                <Stack sx={{ padding: 2 }} alignItems={"center"} direction={"row"}>
-                  <span>
-                    <Badge badgeContent={4} color="secondary">
-                      <MonetizationOn />
-                    </Badge>
-                  </span>
-                </Stack>
-              </Item>
               <div>
-                <Item
-                  sx={{ paddingX: "8px", backgroundColor: '#62A8D1', border: "none", boxShadow: "none" }}
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  onClick={handleMenu}
-                >
-                  <Stack direction={"row"} sx={{ border: "none" }}>
-                    <Typography variant="subtitle2" gutterBottom sx={{ marginBottom: 0, border: "none" }}>
-                      <small>welcome,</small> User
-                    </Typography>
-                    <ArrowDropDownOutlinedIcon sx={{ margin: "auto" }} />
-                  </Stack>
-                </Item>
                 <Menu
                   id="menu-appbar"
                   anchorEl={anchorEl}

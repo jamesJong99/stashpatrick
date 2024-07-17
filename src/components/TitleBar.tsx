@@ -3,19 +3,19 @@ import HomeIcon from '@mui/icons-material/Home';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Stack, Box, Typography } from "@mui/material"
 
-interface props{
+interface props {
     title: string,
     child: string
 }
-export const TitleBar = ({title, child}: props) => {
+export const TitleBar = ({ title, child }: props) => {
     return (
-        <Stack>
-            <Stack sx={{ minHeight: "41px", paddingLeft:"12px", paddingTop:"6px", backgroundColor: "#F5F5F5", color:"8089A0", fontSize:"16px" }} direction={"row"} fontSize={"16px"}>
-                <HomeIcon style={{ paddingTop: "1px" }} /> <a style={{ color: "#4C8FBD" }}>Home</a> <ArrowForwardIosIcon style={{ marginTop: "4px", color: "#8089A0", fontSize: "14px" }} /> <span style={{color: "#8089A0", fontSize: "16px"}}>{title}</span>
-            </Stack>
-            <Typography style={{ paddingBottom: "12px", fontFamily:"Open Sans", paddingLeft:"30px", paddingTop:"12px", fontSize: "24px", borderBottom: "1px solid #E5E5E5", fontWeight: "lighter", color: "#2679B5" }}>
-                {title} <KeyboardDoubleArrowRightIcon style={{ paddingTop: "4px", color: "#8089A0", fontSize: "14px" }} /><small style={{ fontSize: "14px", fontWeight: "400", color: "#8089A0", }}>{child}</small>
+        <Stack direction={"row"} justifyContent={"space-between"} sx={{marginTop:"75px", paddingRight:"50px", background: "white"}}>
+            <Typography style={{ paddingBottom: "12px", fontFamily: "Open Sans", paddingLeft: "30px", paddingTop: "12px", fontSize: "24px", fontWeight: "400" }}>
+                {title} 
             </Typography>
+            <Stack sx={{ color: "8089A0", fontSize: "16px", lineHeight:"60px" }} direction={"row"} fontSize={"16px"}>
+                <a style={{ color: "#8fbd56" }}>Home</a> <KeyboardDoubleArrowRightIcon style={{ marginTop: "22px", marginLeft:"10px", marginRight:"10px", color: "#8089A0", fontSize: "14px" }} /> <span style={{ color: "#8089A0", fontSize: "16px" }}>{title}</span>
+            </Stack>
         </Stack>
     )
 }
