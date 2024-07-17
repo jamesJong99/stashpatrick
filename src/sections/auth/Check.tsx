@@ -90,7 +90,7 @@ export default function CheckView() {
                 size="small"
                 fullWidth={true}
                 variant="outlined"
-                placeholder="Password"
+                placeholder="Your secret-key"
                 sx={{ fontSize: "15px" }}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

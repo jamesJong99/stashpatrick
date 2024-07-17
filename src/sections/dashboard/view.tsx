@@ -87,7 +87,7 @@ export default function DashboardView() {
                 </Stack>
             </Stack>
             <Stack>
-                <Typography component={"h4"} sx={{ fontSize: "20px", textAlign:"center" }}>
+                <Typography component={"h4"} sx={{ fontSize: "20px", textAlign:"center",color:"#495057" }}>
                     Level Info
                 </Typography>
                 <LevelTable />
