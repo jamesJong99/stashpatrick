@@ -149,7 +149,7 @@ export default function Nav({ title, children }: Props) {
   };
 
   return (
-    <Box sx={{ padding: 0, backgroundColor:"white"}}>
+    <Box sx={{ padding: 0, backgroundColor: "white" }}>
       <CssBaseline />
       <Stack
         direction={"row"}
@@ -169,7 +169,7 @@ export default function Nav({ title, children }: Props) {
         <Stack direction={"row"} justifyContent={"end"} sx={{ paddingTop: "5px" }}>
           <Box sx={{ paddingX: "12px" }}>
             <Link href="#" style={{ textDecoration: "none" }} >
-              <ShoppingCartOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }} className='nav-item'/>
+              <ShoppingCartOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }} className='nav-item' />
             </Link>
           </Box>
           <Box sx={{ paddingX: "12px" }} >
@@ -181,7 +181,7 @@ export default function Nav({ title, children }: Props) {
           </Box>
           <Box sx={{ paddingX: "12px" }}>
             <Link href="#" style={{ textDecoration: "none", display: "flex" }}>
-              <NorthOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }}  />
+              <NorthOutlinedIcon sx={{ color: "#100f15", fontSize: "20px" }} />
               <Typography sx={{ color: "#100f15" }} className='nav-item'>
                 0 LVL
               </Typography>
@@ -217,15 +217,17 @@ export default function Nav({ title, children }: Props) {
                 sx={{ width: "100%", paddingX: "60px" }}
               >
                 {listItems.map((item, ind) =>
-                  <Item className='nav-item' key={ind} sx={{ boxShadow: "none", borderRight: 'none', borderLeft: "none", cursor:"pointer" }}>
-                    <Stack sx={{ lineHeight: "45px", paddingX: "8px" }} alignItems={"center"} direction={"row"}>
-                      {item.icon}
-                      <span style={{ minWidth: "40px", marginLeft: "3px", marginTop:"3px" }}>
-                        {item.text}
-                      </span>
-                      {(item.childs ? <ChevronRightOutlinedIcon /> : <></>)}
-                    </Stack>
-                  </Item>
+                  <Link key={ind} href={(item.text=="Logout"?"/":"#")} style={{textDecoration:"none"}}>
+                    <Item className='nav-item' sx={{ boxShadow: "none", borderRight: 'none', borderLeft: "none", cursor: "pointer" }}>
+                      <Stack sx={{ lineHeight: "45px", paddingX: "8px" }} alignItems={"center"} direction={"row"}>
+                        {item.icon}
+                        <span style={{ minWidth: "40px", marginLeft: "3px", marginTop: "3px" }}>
+                          {item.text}
+                        </span>
+                        {(item.childs ? <ChevronRightOutlinedIcon /> : <></>)}
+                      </Stack>
+                    </Item>
+                  </Link>
                 )}
               </Stack>
               <div>

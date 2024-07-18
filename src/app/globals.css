@@ -204,3 +204,6 @@ input {
 .select-row:hover {
     background-color: #c5e7a4;
 }
+.btn-transaction:hover {
+    background-color: #d12c47c2;
+}
