@@ -1,7 +1,7 @@
 import RegisterView from "@/sections/auth/Register";
 
 export const metadata = {
-  title: 'test: register',
+  title: 'Patrick Market',
 };
 
 export default function Page() {

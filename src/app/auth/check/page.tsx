@@ -1,7 +1,7 @@
 import CheckView from "@/sections/auth/Check";
 
 export const metadata = {
-  title: 'name: Secret-key',
+  title: 'Patrick Market',
   discription:'stashpatrick check secret-key page'
 };
 

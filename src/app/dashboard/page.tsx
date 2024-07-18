@@ -5,7 +5,7 @@ import { TitleBar } from "@/components/TitleBar";
 import { Footer } from "@/components/Footer";
 
 export const metadata = {
-    title: 'test: Dashboard',
+    title: 'Patrick Market',
 };
 
 export default function Page() {

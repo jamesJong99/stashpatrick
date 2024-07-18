@@ -1,7 +1,7 @@
 import LoginView from "@/sections/auth/Login";
 
 export const metadata = {
-  title: 'test: Login',
+  title: 'Patrick Market',
   discription:'stashpatrick login page'
 };
 
