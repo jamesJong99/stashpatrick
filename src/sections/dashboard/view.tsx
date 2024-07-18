@@ -29,6 +29,8 @@ export default function DashboardView() {
     const [coin, setCoin] = React.useState('');
     const [amount, setAmount] = React.useState('');
     const [payment, setPayment] = React.useState(0);
+    const [selCoin, setSelCoin] = React.useState(0);
+    const [selAmount, setSelAmount] = React.useState(0);
     const handleChange = (event: SelectChangeEvent) => {
         setCoin(event.target.value as string);
     };
